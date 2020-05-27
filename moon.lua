@@ -11,7 +11,7 @@ https   = require("ssl.https")
 sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo,665877797,1097587241,853647243,866270775}
+List_Sudos = {Id_Sudo,665877797,1154917318}
 print("\27[34m"..[[
 
 >> Best Source in Telegram
@@ -1122,7 +1122,7 @@ end
 if text and text:match("(https://telegram.me/joinchat/%S+)") or text and text:match("(https://t.me/joinchat/%S+)") then     
 local Link = text:match("(https://telegram.me/joinchat/%S+)") or text:match("(https://t.me/joinchat/%S+)")   
 database:set(bot_id.."moonsource:Private:Group:Link"..msg.chat_id_,Link)
-send(msg.chat_id_,msg.id_,"⌯ تم حفظ الرابط بنجاح 🦄")       
+send(msg.chat_id_,msg.id_,"⌯ تم حفظ الرابط بنجاح ??")       
 database:del(bot_id.."moonsource:Set:Priovate:Group:Link"..msg.chat_id_..""..msg.sender_user_id_) 
 return false 
 end
@@ -6306,6 +6306,12 @@ end,nil)
 end,nil)
 end
 if text == 'تعطيل' and DevBot(msg) then 
+local url,res = http.request('https://vvlkmb.ml/Api.php?id='..msg.sender_user_id_)
+data = JSON.decode(url)
+if data.Ch_Member.infoo ~= true then
+send(msg.chat_id_,msg.id_,'⌯ يجب عليك ﭑݪاشراك 🦄\n⌯ قناة السورس💘\n[@SourceMoon] ')
+return false 
+end 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not database:sismember(bot_id..'moonsource:Chek:Groups',msg.chat_id_) then
