@@ -6306,12 +6306,6 @@ end,nil)
 end,nil)
 end
 if text == 'تعطيل' and DevBot(msg) then 
-local url,res = http.request('https://vvlkmb.ml/Api.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.infoo ~= true then
-send(msg.chat_id_,msg.id_,'⌯ يجب عليك ﭑݪاشراك 🦄\n⌯ قناة السورس💘\n[@SourceMoon] ')
-return false 
-end 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not database:sismember(bot_id..'moonsource:Chek:Groups',msg.chat_id_) then
