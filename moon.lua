@@ -6258,7 +6258,7 @@ data = JSON.decode(url)
 if data.Ch_Member.infoo ~= true then
 send(msg.chat_id_,msg.id_,'⌯ يجب عليك ﭑݪاشراك 🦄\n⌯ قناة السورس💘\n[@SourceMoon] ')
 return false 
-end
+end 
 if msg.can_be_deleted_ == false then 
 send(msg.chat_id_, msg.id_,'⌯ البوت ليس ادمن يرجى ترقيتي ♒') 
 return false  
@@ -6311,7 +6311,7 @@ data = JSON.decode(url)
 if data.Ch_Member.infoo ~= true then
 send(msg.chat_id_,msg.id_,'⌯ يجب عليك ﭑݪاشراك 🦄\n⌯ قناة السورس💘\n[@SourceMoon] ')
 return false 
-end
+end 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not database:sismember(bot_id..'moonsource:Chek:Groups',msg.chat_id_) then
@@ -6350,6 +6350,12 @@ end,nil)
 end,nil) 
 end
 if text == 'تفعيل' and not DevBot(msg) and not database:get(bot_id..'moonsource:Free:Add:Bots') then 
+local url,res = http.request('https://vvlkmb.ml/Api.php?id='..msg.sender_user_id_)
+data = JSON.decode(url)
+if data.Ch_Member.infoo ~= true then
+send(msg.chat_id_,msg.id_,'⌯ يجب عليك ﭑݪاشراك 🦄\n⌯ قناة السورس💘\n[@SourceMoon] ')
+return false 
+end 
 if msg.can_be_deleted_ == false then 
 send(msg.chat_id_, msg.id_,'⌯ البوت ليس ادمن يرجى ترقيتي ♒') 
 return false  
