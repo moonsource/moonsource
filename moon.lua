@@ -4220,7 +4220,7 @@ x = x + 1
 if database:get(bot_id.."moonsource:User:Name"..v.user_id_) then
 t = t..""..x.." ⌯ [@"..database:get(bot_id.."moonsource:User:Name"..v.user_id_).."]\n"
 else
-t = t..""
+t = t..""..x.." ⌯ [No user](tg://user?id="..v.user_id_..") \n "
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -6371,7 +6371,7 @@ if text == 'تعطيل' and DevBot(msg) then
 local url,res = http.request('https://vvlkmb.ml/Api.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.infoo ~= true then
-send(msg.chat_id_,msg.id_,'⌯ يجب عليك ﭑݪاشراك 🦄\n⌯ قناة السورس💘\n[@SourceMoon] ')
+send(msg.chat_id_,msg.id_,'⌯ يجب عليك ﭑݪاشراك ??\n⌯ قناة السورس💘\n[@SourceMoon] ')
 return false 
 end 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
