@@ -4220,7 +4220,7 @@ x = x + 1
 if database:get(bot_id.."moonsource:User:Name"..v.user_id_) then
 t = t..""..x.." ⌯ [@"..database:get(bot_id.."moonsource:User:Name"..v.user_id_).."]\n"
 else
-t = t..""..x.." ⌯ [No username](tg://user?id="..v.user_id_..")\n"
+t = t..""..x.." ⌯ [No user](tg://user?id="..v.user_id_..")\n "
 end
 end
 send(msg.chat_id_,msg.id_,t)
