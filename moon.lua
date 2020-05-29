@@ -4211,7 +4211,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_moonsource, nil)
 end
 if text == "تاك للكل" and Addictive(msg) then
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""), offset_ = 0,limit_ = 200},function(ta,taha)
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""), offset_ = 0,limit_ = 100},function(ta,taha)
 local t = "\n⌯ قائمة الاعضاء 🦄\n"
 x = 0
 local list = taha.members_
@@ -4220,7 +4220,7 @@ x = x + 1
 if database:get(bot_id.."moonsource:User:Name"..v.user_id_) then
 t = t..""..x.." ⌯ [@"..database:get(bot_id.."moonsource:User:Name"..v.user_id_).."]\n"
 else
-t = t..""..x.." ⌯ [No user](tg://user?id="..v.user_id_..")\n "
+t = t..""
 end
 end
 send(msg.chat_id_,msg.id_,t)
