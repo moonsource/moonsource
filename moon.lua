@@ -4220,7 +4220,7 @@ x = x + 1
 if database:get(bot_id.."moonsource:User:Name"..v.user_id_) then
 t = t..""..x.." ⌯ [@"..database:get(bot_id.."moonsource:User:Name"..v.user_id_).."]\n"
 else
-t = t..""..x.." ⌯ "..v.user_id_.."\n"
+t = t..""..x.." ⌯ لا  توجد معرفات حاليا \n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -4238,7 +4238,7 @@ else
 first_name = ""
 end   
 if result.last_name_ then 
-last_name = "⌯ اسمك الثاني ← ☾︎`"..result.last_name_.."`☽︎♈" 
+last_name = "⌯ اسمك الثاني ← ☾︎`"..result.last_name_.."`☽︎ ♈" 
 else
 last_name = ""
 end      
