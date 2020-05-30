@@ -6316,8 +6316,9 @@ send(msg.chat_id_, msg.id_,Text)
 return false
 end
 
-if text == 'غ١' then
-sendVoice(msg.chat_id_, msg.id_,'https://t.me/cuUuUu/9060', '⌯')
+mu = https://t.me/cuUuUu/9060,
+if text == 'a' and  then
+sendVoice(msg.chat_id_,msg.id_,mu,'hassan')
 end
 
 end ---- Chat_Type = 'GroupBot' 
