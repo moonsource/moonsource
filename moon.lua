@@ -6310,10 +6310,14 @@ Text = [[
 ⌯ اذاعه
 ⌯ غادر
 
- [⌔ 𝙲𝙷  ~⪼  @SourceMoon](https://t.me/SourceMoon)
+ [⌔ 𝙲𝙷 ⌔ ~⪼  @SourceMoon](https://t.me/SourceMoon)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
+end
+
+if text == 'غ١' then
+sendVoice(msg.chat_id_, msg.id_,'https://t.me/cuUuUu/9060', '⌯')
 end
 
 end ---- Chat_Type = 'GroupBot' 
