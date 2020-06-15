@@ -6309,7 +6309,11 @@ Text = [[
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
-
+if text == 'اه' then
+gg = [[https://omarplo.cf/pic.jpg]]
+sendPhoto(msg.chat_id_, msg.id_,gg)
+return false
+end
 end ---- Chat_Type = 'GroupBot' 
 end ---- Chat_Type = 'GroupBot' 
 
