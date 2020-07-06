@@ -7094,13 +7094,13 @@ local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://bmwvip.ml/Api/Abi.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
 t = "\n⛔┇قائمه الزخرفه \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ \n"
+i = 0
 for k,v in pairs(zx.ok) do
-print(v)
-t = t..k.."-  "..v.." \n"
+i = i + 1
+t = t..i.."-  "..v.." \n"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-
 if text == 'تفعيل البوت الخدمي' and Devmoonsource(msg) then  
 database:del(bot_id..'moonsource:Free:Add:Bots') 
 send(msg.chat_id_, msg.id_,'⌯ تم تفعيل البوت الخدمي ') 
