@@ -4812,7 +4812,7 @@ send(msg.chat_id_, msg.id_,'⌯  لا تستطيع استخدام البوت ي�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"⌯ ارسل الكلمه التري تريد اضافتها")
+send(msg.chat_id_, msg.id_,"⌯ ارسل الكلمه تريد اضافتها")
 database:set(bot_id.."moonsource:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
@@ -4826,7 +4826,7 @@ send(msg.chat_id_, msg.id_,'⌯  لا تستطيع استخدام البوت ي�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"⌯ ارسل الكلمه التري تريد حذفها")
+send(msg.chat_id_, msg.id_,"⌯ ارسل الكلمه تريد حذفها ")
 database:set(bot_id.."moonsource:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,"true2")
 return false 
 end
@@ -5012,12 +5012,12 @@ end
 end
 
 if text == "اضف رد للكل" and Devmoonsource(msg) then 
-send(msg.chat_id_, msg.id_,"⌯  ارسل الكلمه التري تريد اضافتها")
+send(msg.chat_id_, msg.id_,"⌯  ارسل الكلمه تريد اضافتها")
 database:set(bot_id.."moonsource:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
 if text == "حذف رد للكل" and Devmoonsource(msg) then 
-send(msg.chat_id_, msg.id_,"⌯  ارسل الكلمه التري تريد حذفها")
+send(msg.chat_id_, msg.id_,"⌯  ارسل الكلمه تريد حذفها")
 database:set(bot_id.."moonsource:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
@@ -5254,7 +5254,7 @@ return false
 end
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
 if result.first_name_  then
-first_name = "🚫┇ اسمك الاول ← {`"..(result.first_name_).."`}"
+first_name = "⌯  اسمك الاول ← {`"..(result.first_name_).."`}"
 else
 first_name = ""
 end   
@@ -5447,7 +5447,7 @@ GBan = "محظور عام"
 else
 GBan = "غير محظور عام"
 end
-send(msg.chat_id_, msg.id_,"⌯  الحظر العام » "..GBan.."\n🚫┇ الحظر » "..Ban.."\n⌯  الكتم » "..Muted)
+send(msg.chat_id_, msg.id_,"⌯  الحظر العام » "..GBan.."\n⌯  الحظر » "..Ban.."\n⌯  الكتم » "..Muted)
 else
 send(msg.chat_id_, msg.id_,"⌯  المعرف غلط")
 end
@@ -5481,7 +5481,7 @@ GBan = "محظور عام"
 else
 GBan = "غير محظور عام"
 end
-Textt = "⌯  الحظر العام » "..GBan.."\n🚫┇ الحظر » "..Ban.."\n⌯  الكتم » "..Muted..""
+Textt = "⌯  الحظر العام » "..GBan.."\n⌯  الحظر » "..Ban.."\n⌯  الكتم » "..Muted..""
 send(msg.chat_id_, msg.id_,Textt)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_moonsource, nil)
@@ -5540,7 +5540,7 @@ database:srem(bot_id.."moonsource:Mod:User"..msg.chat_id_, admins[i].user_id_)
 end
 end
 if num2 == 0 then
-send(msg.chat_id_, msg.id_,"💥┇ لا توجد ادمنية ليتم رفعهم") 
+send(msg.chat_id_, msg.id_,"⌯  لا توجد ادمنية ليتم رفعهم") 
 else
 send(msg.chat_id_, msg.id_,"⌯  تمت ترقية { "..num2.." } من ادمنية المجموعه") 
 end
@@ -5612,7 +5612,7 @@ database:set(bot_id.."moonsource:Left:Bot"..msg.chat_id_,true)
 send(msg.chat_id_, msg.id_, "⌯ تم تعطيل مغادرة البوت") 
 return false 
 end
-if text == (database:get(bot_id.."moonsource:Name:Bot") or "بلاك") then
+if text == (database:get(bot_id.."moonsource:Name:Bot") or "مون") then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -5622,7 +5622,7 @@ send(msg.chat_id_, msg.id_,'⌯  لا تستطيع استخدام البوت ي�
 end
 return false
 end
-Namebot = (database:get(bot_id.."moonsource:Name:Bot") or "بلاك")
+Namebot = (database:get(bot_id.."moonsource:Name:Bot") or "مون")
 local namebot = {
 "عمري فداك "..Namebot.. " كول حب ",
 "كول حبيبي ؟ اني "..Namebot,
@@ -5641,7 +5641,7 @@ return false
 end
 
 if text == "بوت" then
-Namebot = (database:get(bot_id.."moonsource:Name:Bot") or "بلاك")
+Namebot = (database:get(bot_id.."moonsource:Name:Bot") or "مون")
 send(msg.chat_id_, msg.id_,"اسمي القميل ["..Namebot.."] ") 
 end
 if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then 
@@ -6221,10 +6221,10 @@ local get_id = get_id:gsub('#game',Num_Games)
 local get_id = get_id:gsub('#photos',Total_Photp) 
 sendPhoto(msg.chat_id_,msg.id_,taha.photos_[0].sizes_[1].photo_.persistent_id_,get_id)
 else
-sendPhoto(msg.chat_id_,msg.id_,taha.photos_[0].sizes_[1].photo_.persistent_id_,'📸┇'..Description..'\n💳┇ايديك ~⪼ '..Id..'\n🎫┇معرفك ~⪼ '..UserName_User..'\n👨‍✈️┇رتبتك ~⪼ '..Status_Gps..'\n⌯ رسائلك ~⪼ '..NumMsg..'\n📧┇السحكات ~⪼ '..message_edit..' \n⌨️┇تتفاعلك ~⪼ '..TotalMsg..'\n💎┇ مجوهراتك ~⪼ '..Num_Games)
+sendPhoto(msg.chat_id_,msg.id_,taha.photos_[0].sizes_[1].photo_.persistent_id_,'↣• ʏᴏᴜʀ ɪᴅ ➤ '..Id..' ↝🍬\n↣• ᴜѕᴇʀɴᴀᴍᴇ ➤ '..UserName_User..' ↝🍬\n↣• ѕᴛᴀᴛѕ ➤ '..Status_Gps..' ↝🍬\n↣• ᴍѕɢѕ ➤ '..NumMsg..' ↝🍬\n↣•  ɢᴀᴍᴇ ➤ '..Num_Games..'  ↝🍬\n↣• @SourceMoon☾')
 end
 else
-send(msg.chat_id_, msg.id_,'⌯ ليس لديك صوره \n'..'\n*💳┇ايديك ~⪼ '..Id..'\n🎫┇معرفك ~⪼* ['..UserName_User..']*\n👨‍✈️┇رتبتك ~⪼ '..Status_Gps..'\n⌯ رسائلك ~⪼ '..NumMsg..'\n📧┇السحكات ~⪼ '..message_edit..' \n⌨️┇تتفاعلك ~⪼ '..TotalMsg..'\n💎┇ مجوهراتك ~⪼ '..Num_Games..'*') 
+send(msg.chat_id_, msg.id_,'↣• لحلو معنده صوره 🥺 \n↣• ʏᴏᴜʀ ɪᴅ ➤ '..Id..' ↝🍬\n↣• ᴜѕᴇʀɴᴀᴍᴇ ➤ '..UserName_User..' ↝🍬\n↣• ѕᴛᴀᴛѕ ➤ '..Status_Gps..' ↝🍬\n↣• ᴍѕɢѕ ➤ '..NumMsg..' ↝🍬\n↣•  ɢᴀᴍᴇ ➤ '..Num_Games..' ↝🍬\n↣• @SourceMoon☾')
 end
 else
 if get_id then
@@ -6240,7 +6240,7 @@ local get_id = get_id:gsub('#game',Num_Games)
 local get_id = get_id:gsub('#photos',Total_Photp) 
 send(msg.chat_id_, msg.id_,'['..get_id..']') 
 else
-send(msg.chat_id_, msg.id_,'\n*💳┇ايديك ~⪼ '..Id..'\n🎫┇معرفك ~⪼* ['..UserName_User..']*\n👨‍✈️┇رتبتك ~⪼ '..Status_Gps..'\n⌯ رسائلك ~⪼ '..NumMsg..'\n📧┇السحكات ~⪼ '..message_edit..' \n⌨️┇تتفاعلك ~⪼ '..TotalMsg..'\n💎┇ مجوهراتك ~⪼ '..Num_Games..'*') 
+send(msg.chat_id_, msg.id_,'↣• 𝐇𝐢𝐬 𝐢𝐝 '..Id..' ↝🍬\n↣• 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞 ➤ ['..UserName_User..'] ↝🍬\n↣• 𝐒𝐭𝐚𝐭𝐬 ➤ '..Status_Gps..'↝🍬\n↣• 𝐌𝐬𝐠𝐬 ➤  '..NumMsg..' ↝🍬\n[↣• 𝐒𝐨𝐮𝐫𝐜𝐞 𝐌𝐨𝐨𝐧☾](https://t.me/SourceMoon)')
 end
 end
 end,nil)   
@@ -6280,7 +6280,7 @@ local Status_Gps = Get_Rank(Id,msg.chat_id_)
 local message_edit = database:get(bot_id..'moonsource:message_edit'..msg.chat_id_..data.id_) or 0
 local Num_Games = database:get(bot_id.."Tshak:Msg_User"..msg.chat_id_..":"..data.id_) or 0
 local Add_Mem = database:get(bot_id.."moonsource:Add:Memp"..msg.chat_id_..":"..data.id_) or 0
-send(msg.chat_id_, msg.id_,'*⌯ ايديه - '..Id..'\n⌯ رسائله - '..NumMsg..'\n⌯ معرفه - *['..UserName_User..']*\n📈┇تفاعله - '..TotalMsg..'\n⌯ رتبته - '..Status_Gps..'\n⚡┇تعديلاته - '..message_edit..'\n⌯ جهاته - '..Add_Mem..'*') 
+send(msg.chat_id_, msg.id_,'↣• 𝐇𝐢𝐬 𝐢𝐝 '..Id..' ↝🍬\n↣• 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞 ➤ ['..UserName_User..'] ↝🍬\n↣• 𝐒𝐭𝐚𝐭𝐬 ➤ '..Status_Gps..'↝🍬\n↣• 𝐌𝐬𝐠𝐬 ➤  '..NumMsg..' ↝🍬\n[↣• 𝐒𝐨𝐮𝐫𝐜𝐞 𝐌𝐨𝐨𝐧☾](https://t.me/SourceMoon)')
 end,nil)   
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_moonsource, nil)
@@ -6304,7 +6304,7 @@ local Status_Gps = Get_Rank(Id,msg.chat_id_)
 local message_edit = database:get(bot_id..'moonsource:message_edit'..msg.chat_id_..data.id_) or 0
 local Num_Games = database:get(bot_id.."Tshak:Msg_User"..msg.chat_id_..":"..data.id_) or 0
 local Add_Mem = database:get(bot_id.."moonsource:Add:Memp"..msg.chat_id_..":"..data.id_) or 0
-send(msg.chat_id_, msg.id_,'*⌯ ايديه - '..Id..'\n⌯ رسائله - '..NumMsg..'\n⌯ معرفه - *['..UserName_User..']*\n📈┇تفاعله - '..TotalMsg..'\n⌯ رتبته - '..Status_Gps..'\n⚡┇تعديلاته - '..message_edit..'\n⌯ جهاته - '..Add_Mem..'*') 
+send(msg.chat_id_, msg.id_,'↣• 𝐇𝐢𝐬 𝐢𝐝 '..Id..' ↝🍬\n↣• 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞 ➤ ['..UserName_User..'] ↝🍬\n↣• 𝐒𝐭𝐚𝐭𝐬 ➤ '..Status_Gps..'↝🍬\n↣• 𝐌𝐬𝐠𝐬 ➤  '..NumMsg..' ↝🍬\n[↣• 𝐒𝐨𝐮𝐫𝐜𝐞 𝐌𝐨𝐨𝐧☾](https://t.me/SourceMoon)')
 end,nil)   
 else
 send(msg.chat_id_, msg.id_,'⌯ لا يوجد حساب بهاذا المعرف')
@@ -6617,7 +6617,7 @@ send(msg.chat_id_, msg.id_,"⌯ مبروك فزت وطلعت المحيبس بل
 database:incrby(bot_id.."Tshak:Add:Num"..msg.chat_id_..msg.sender_user_id_,3)  
 elseif tonumber(NUM) ~= tonumber(GETNUM) then
 database:del(bot_id.."Tshak:SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
-send(msg.chat_id_, msg.id_,"⌯ للاسف لقد خسرت \n⌯ المحيبس بل ايد رقم { "..GETNUM.." }\n💥┇حاول مره اخرى للعثور على المحيبس")
+send(msg.chat_id_, msg.id_,"⌯ للاسف لقد خسرت \n⌯ المحيبس بل ايد رقم { "..GETNUM.." }\n⌯ حاول مره اخرى للعثور على المحيبس")
 end
 end
 end
@@ -7197,7 +7197,7 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n⌯ اهلا بك في متجر ملفات بلاك\n⌯ يوجد في المتجر ملف الردود\n⚙┇يتم ادراج الملفات في التحديثات القادمه \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+local TextS = "\n⌯ اهلا بك في متجر ملفات مون\n⌯ يوجد في المتجر ملف الردود\n⚙┇يتم ادراج الملفات في التحديثات القادمه \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 local TextE = "\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯ تدل علامة (✔) الملف مفعل\n".."⌯ تدل علامة (✖) الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
@@ -8471,7 +8471,7 @@ if NewCmmd then
 data.message_.content_.text_ = (NewCmmd or data.message_.content_.text_)
 end
 end
-local Name_Bot = (database:get(bot_id.."moonsource:Name:Bot") or "بلاك")
+local Name_Bot = (database:get(bot_id.."moonsource:Name:Bot") or "مون")
 if not database:get(bot_id.."moonsource:Fun_Bots"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
