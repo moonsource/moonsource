@@ -427,8 +427,8 @@ local UserName = (data.username_ or "moonsourceTEAM")
 for moonsource in string.gmatch(data.first_name_, "[^%s]+") do
 data.first_name_ = moonsource
 end
-local NameUser = "🗣┇بواسطه ~⪼ ["..data.first_name_.."](T.me/"..UserName..")\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
-local NameUserr = "🎫┇الاسم ~⪼ ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUser = "⌯ بواسطه ~⪼ ["..data.first_name_.."](T.me/"..UserName..") 💞\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+local NameUserr = "⌯ الاسم ~⪼ ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "lock" then
 send(msg.chat_id_, msg.id_,NameUser.."\n"..text.." بالمسح 🦄\n")
 return false
